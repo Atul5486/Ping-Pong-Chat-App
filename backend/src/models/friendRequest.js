@@ -1,0 +1,24 @@
+import mongoose  from "mongoose";
+
+const friendReqestSchema=new mongoose.Schema({
+    sender:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User',
+        required:true
+    },
+    recipient:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User',
+        required:true
+    },
+    status:{
+        type:String,
+        enum:['pending','accepted','rejected'],
+        default:'pending'
+    }
+},{timestamps:true})
+
+const friendRequest=mongoose.model.FriendRequest || mongoose.model('FriendRequest',friendReqestSchema)
+
+export default friendRequest;
+

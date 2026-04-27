@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@plugin "daisyui"{
+    themes:all
+}
+.str-chat__channel {
+    @apply flex items-center justify-center bg-transparent;
+}
+
+.str-chat__container {
+    @apply w-full h-[87vh] rounded-xl overflow-hidden border border-base-300;
+}
+
+.str-chat__main-panel {
+    @apply h-full;
+}
+
+.str-chat__channel-header {
+    @apply bg-base-100 text-base-content border-b border-base-300;
+}
+
+.str-chat__list {
+    @apply bg-base-100 p-3;
+}
+
+.str-chat__message-input {
+    @apply bg-base-100 border-t border-base-300;
+}
+
+.str-chat__message-textarea {
+    @apply text-base-content!;
+}
+
+.str-chat__empty-channel {
+    @apply bg-transparent;
+}
+
+
+
+*{
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+}
+
+@layer base{
+    body{
+        font-family: "Inter",sans-serif;
+        @apply bg-base-200 text-base-content
+    }
+}
+
+@layer components{
+    .flexCenter{
+        @apply flex items-center justify-center
+    }
+    .flexStart{
+        @apply flex items-center justify-start
+    }
+    .flexBetween{
+        @apply flex items-center justify-between
+    }
+    .flexEnd{
+        @apply flex items-center justify-end
+    }
+}
+
+@layer utilities{
+    h1{
+        @apply text-[38px] md:text-[44px] font-bold;
+    }
+    h2{
+        @apply text-[31px] md:text-[38px] font-bold;
+    }
+    h3{
+        @apply text-[20px] md:text-[25px] font-bold;
+    }
+    h4{
+        @apply text-[17px] md:text-[20px] font-bold;
+    }
+    h5{
+        @apply text-[16px] md:text-[17px] font-bold;
+    }
+    h6{
+        @apply text-[14px] md:text-[15px] font-bold;
+    }
+    .para{
+        @apply leading-[1.3] text-[13px] opacity-60;
+    }
+}
